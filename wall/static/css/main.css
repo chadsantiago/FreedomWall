@@ -303,6 +303,17 @@ a:active {
   text-decoration: none;
 }
 
+a:focus {
+  text-decoration: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 .icon {
   font-family: FontAwesome;
   border: none;
