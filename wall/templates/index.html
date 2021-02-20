@@ -19,7 +19,9 @@
         <div class="container">
         {% for story in posts %}
             <div class="items m-b1">
-                <h4 class="context">{{ story.content }}</h4>
+<pre class="context">
+{{ story.content }}
+</pre>
                 <div class="caption">
                 <p class="date">{{ story.date_posted }}</p>
                 <a class="submit" href="/delete/{{ story.public_id }}"><p class="context"><i class="far fa-trash-alt"></i></p></a>
