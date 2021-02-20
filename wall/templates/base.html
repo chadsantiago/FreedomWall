@@ -30,5 +30,11 @@
         {% block body %}{% endblock %}
 
     </div>
+
+    <script type="text/javascript">
+    document.getElementById('down').addEventListener('click', () => {
+        document.getElementById('dummy').scrollIntoView();
+    });
+    </script>
 </body>
 </html>
