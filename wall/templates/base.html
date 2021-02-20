@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Freedom Wall">
+    <meta property="og:description" content="Share Your Thoughts">
+    <meta property="og:image" content="{{ url_for('static', filename='img/preview.png') }}" />
+    <meta property="twitter:title" content="Freedom Wall">
+    <meta property="twitter:description" content="Share Your Thoughts">
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/preview.png') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Share Your Thoughts">
+    <meta name="author" content="Richard Santiago">
+    <meta name="copyright" content="Richard Santiago" />
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/frame.css') }}">
-    <title>Document</title>
+    
+    <title>Freedom Wall - Share Your Thoughts</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/icon.png') }}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
