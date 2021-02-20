@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <section m-b3>
+        <div class="container text-center m-t2">
+            <h1 class="title">Freedom Wall</h1>
+        </div>
+    
+        <div class="secondary-container">
+            <div class="caption">
+            <h6 class="sub-title">Today</h6>
+            <p class="sub-title"></p>
+            </div>
+        </div>
+
+        <div class="container">
+        {% for story in posts %}
+            <div class="items m-b1">
+                <h4 class="context text-capitalize">{{ story.content }}</h4>
+                <div class="caption">
+                <p class="date">{{ story.date_posted }}</p>
+                <a href="/delete/{{ story.id }}"><p class="context"><i class="far fa-trash-alt"></i></p></a>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+    <section class="dummy" m-b3></section>
+
+
+
+
+{% endblock %}

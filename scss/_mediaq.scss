@@ -1,0 +1,106 @@
+@media (min-width: 320px) {
+
+    .logo-container img {
+        height: 35px;
+    }
+
+    .thumbnail-container img{
+        width: 100%;
+        height: 180px; 
+        object-fit: cover;
+    }
+
+    .notepad {
+        width: 80%;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    .thumbnail-container img{
+        width: 100%;
+        height: 180px; 
+        object-fit: cover;
+    }
+
+    .notepad {
+        width: 80%;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}
+
+/* Extra small devices (phones, 768px and down) */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .thumbnail-container img{
+        width: 100%;
+        height: 180px; 
+        object-fit: cover;
+    }
+
+    .notepad {
+        width: 80%;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+}
+
+
+/* Extra small devices (phones, 992px and down) */
+@media (min-width: 992px) {
+
+    .thumbnail-container img{
+        width: 230px;
+        height: 180px; 
+        object-fit: cover;
+    }
+
+    .notepad {
+        width: 90%;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+    
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .thumbnail-container img{
+        width: 230px;
+        height: 180px; 
+        object-fit: cover;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+
+    form, .notepad {
+        width: 90%;
+    }
+    
+}
+
+
