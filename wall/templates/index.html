@@ -30,6 +30,17 @@
     </section>
     <section class="dummy" m-b3></section>
 
+    <footer>
+
+        <form class="container" action="/" method="POST" id="form-id">
+            <div class="box">
+            {{ form.content(class='notepad', id="notepad", maxlength="280", style="resize: none; overflow:auto;", placeholder="What's up?", type="text", title="content", required="required") }}
+            <input class="submit icon fa fa-input" id="submit" type="submit" value="&#xf1d8;"/>
+        </div>
+        </form>
+
+    </footer>
+
 
 
 

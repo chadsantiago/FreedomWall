@@ -30,25 +30,5 @@
         {% block body %}{% endblock %}
 
     </div>
-
-    <footer>
-
-        <form class="container" action="/" method="POST" id="form-id">
-            <div class="box">
-            
-            {% if form.content.errors %}
-                {% for errors in form.content.errors %}
-
-                    {{ form.content(class='notepad', id="notepad", maxlength="280", style="resize: none; overflow:auto;", placeholder="What's up?", type="text", title="content", required="required") }}
-
-                {% endfor %}
-            {% else %}
-                {{ form.content(class='notepad', id="notepad", maxlength="280", style="resize: none; overflow:auto;", placeholder="What's up?", type="text", title="content", required="required") }}
-            {% endif %}
-            <input class="submit icon fa fa-input" id="submit" type="submit" value="&#xf1d8;"/>
-        </div>
-        </form>
-
-    </footer>
 </body>
 </html>
