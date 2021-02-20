@@ -264,7 +264,7 @@ body {
 
 .context {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 2px;
@@ -293,22 +293,22 @@ a {
 
 a:link {
   text-decoration: none;
-  color: transparent;
+  outline: 0;
 }
 
 a:visited {
   text-decoration: none;
-  color: transparent;
+  outline: 0;
 }
 
 a:active {
   text-decoration: none;
-  color: transparent;
+  outline: 0;
 }
 
 a:focus {
   text-decoration: none;
-  color: transparent;
+  outline: 0;
 }
 
 input:focus,
@@ -317,7 +317,6 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
-  color: transparent;
 }
 
 .icon {
@@ -350,5 +349,10 @@ button:focus {
 
 .dummy {
   height: 130px;
+}
+
+.submit {
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 /*# sourceMappingURL=main.css.map */
