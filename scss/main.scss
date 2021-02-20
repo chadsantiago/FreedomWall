@@ -68,26 +68,32 @@ a {
 
     &:link {
         text-decoration: none;
+        color: transparent;
       }
 
     &:visited {
         text-decoration: none;
+        color: transparent;
     }
 
     &:active {
         text-decoration: none;
+        color: transparent;
     }
 
     &:focus {
         text-decoration: none;
+        color: transparent;
     }
 }
 
 input:focus,
+input:active,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
+    color: transparent;
 }
 
 .icon {

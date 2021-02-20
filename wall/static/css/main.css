@@ -293,25 +293,31 @@ a {
 
 a:link {
   text-decoration: none;
+  color: transparent;
 }
 
 a:visited {
   text-decoration: none;
+  color: transparent;
 }
 
 a:active {
   text-decoration: none;
+  color: transparent;
 }
 
 a:focus {
   text-decoration: none;
+  color: transparent;
 }
 
 input:focus,
+input:active,
 select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+  color: transparent;
 }
 
 .icon {
