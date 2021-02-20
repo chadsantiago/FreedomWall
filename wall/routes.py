@@ -35,9 +35,10 @@ def home():
 
 
 # Deleting data
-@app.route('/delete/<int:id>', methods=['POST', 'GET'])
-def delete(id):
-    story_to_delete = Stories.query.get_or_404(id) # get data by id
+@app.route('/delete/<string:public_id>', methods=['POST', 'GET'])
+def delete(public_id):
+    pid = public_id
+    story_to_delete = Stories.query.filter_by(public_id=pid).first() # get data by id
 
     try:
         db.session.delete(story_to_delete) # delete the data
