@@ -79,6 +79,7 @@ body {
 
 a {
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 
     &:link {
         text-decoration: none;
