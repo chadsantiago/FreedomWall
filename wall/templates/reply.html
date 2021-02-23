@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <section class="m-b1">
+        <div class="secondary-container m-t0">
+            <div class="caption">
+            <a href="{{ url_for( 'home' ) }}">
+            <p class="sub-title"><i class="fas fa-angle-double-left"></i></p>
+            </a>
+            <p class="sub-title" id="down"><i class="fas fa-angle-double-down"></i></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="items m-b1">
+<pre class="main">
+{{ parent.content }}
+</pre>
+                <div class="caption m-t0">
+                <p class="date">{{ parent.date_posted }}</p>
+                </div>
+            </div>
+            <p class="sub-title">Replies</p>
+        </div>
+    </section>
+
+
+    <section m-b3>
+
+        <div class="container">
+            {% for story in replies %}
+                <div class="items m-b1">
+<pre class="context">
+{{ story.content }}
+</pre>
+                    <div class="caption m-t0">
+                    <p class="date">{{ story.date_posted }}</p>
+                    <a class="submit" href="/delete/{{ story.public_id }}"><p class="context"><i class="far fa-trash-alt"></i></p></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </section>
+
+
+
+    <section class="dummy m-b3" id="dummy"></section>
+
+    <footer>
+
+        <form class="container" action="{{ url_for( 'read', parentid=parentid ) }}" method="POST" id="form-id">
+            <div class="box">
+            {{ form.content(class='notepad', id="notepad", maxlength="280", style="resize: none; overflow:auto;", placeholder="What's up?", type="text", title="content", required="required") }}
+            <input class="submit icon fa fa-input" id="submit" type="submit" value="&#xf1d8;"/>
+        </div>
+        </form>
+
+    </footer>
+
+
+
+
+{% endblock %}

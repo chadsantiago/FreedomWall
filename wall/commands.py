@@ -1,6 +1,6 @@
 import click
 from wall.database import db
-from wall.models import Stories
+from wall.models import Stories, Replies
 
 
 # create database
@@ -11,10 +11,10 @@ def drop_db():
     db.drop_all()
 
 def create_model():
-    Stories.__table__create(db.engine)
+    Replies.__table__.create(db.engine)
 
 def drop_model():
-    Stories.__table__drop(db.engine)
+    Replies.__table__.drop(db.engine)
 
 
 def init_app(app):

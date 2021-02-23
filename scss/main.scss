@@ -26,12 +26,25 @@ body {
 .title {
     font-family: $primary-font;
     color: $light-color;
-    font-weight: 400;;
+    font-weight: 400;
+}
+
+.main {
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: $light-color;
 }
 
 .sub-title {
     font-family: $primary-font;
     color: $light-color;
+
+    i {
+        font-size: 25px;
+    }
 }
 
 .items {
@@ -134,5 +147,9 @@ button:focus {
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;
+}
+
+#down {
+    cursor: pointer;
 }
 

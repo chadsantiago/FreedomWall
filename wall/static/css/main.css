@@ -244,9 +244,22 @@ body {
   font-weight: 400;
 }
 
+.main {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #f4f4f4;
+}
+
 .sub-title {
   font-family: "Poppins", sans-serif;
   color: #f4f4f4;
+}
+
+.sub-title i {
+  font-size: 25px;
 }
 
 .items {
@@ -361,5 +374,9 @@ button:focus {
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+#down {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -8,24 +8,27 @@
             <p class="sub-title">By: Chad</p>
             <a target="_blank" href="https://github.com/chadsantiago/FreedomWall"><p class="sub-title"><i class="fab fa-github"></i></p></a>
         </div>
-    
         <div class="secondary-container">
             <div class="caption">
             <h6 class="sub-title">Today</h6>
-            <p class="sub-title" id="down"><i class="fas fa-level-down-alt"></i></p>
+            <p class="sub-title" id="down"><i class="fas fa-angle-double-down"></i></p>
             </div>
         </div>
 
         <div class="container">
         {% for story in posts %}
             <div class="items m-b1">
+                <a href="{{ url_for( 'read', parentid=story.public_id ) }}">
 <pre class="context">
 {{ story.content }}
 </pre>
+                </a>
+
                 <div class="caption m-t0">
                 <p class="date">{{ story.date_posted }}</p>
                 <a class="submit" href="/delete/{{ story.public_id }}"><p class="context"><i class="far fa-trash-alt"></i></p></a>
                 </div>
+                
             </div>
         {% endfor %}
         </div>
