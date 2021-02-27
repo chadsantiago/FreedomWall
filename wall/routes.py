@@ -48,6 +48,12 @@ def read(parentid):
         posted = x.strftime("%b %d, %Y | %I:%M:%p")
         current = x.strftime("%b %d, %Y")
 
+        parent = Stories.query.filter(Stories.public_id == parentid).order_by(Stories.date_created.asc()).first()
+
+        reply = parent.reply_count + 1
+
+        parent.reply_count = reply
+
         reply = Replies(public_id=str(uuid.uuid4()), parent_id=parentid, content=form.content.data, date_posted=posted, current_date=current)
 
         db.session.add(reply) # pushing data into database
@@ -78,6 +84,12 @@ def delete(public_id):
     except:
         reply_to_delete = Replies.query.filter_by(public_id=pid).first() # get data by id
         replies = Replies.query.filter_by(public_id=pid).first()
+
+        parent = Stories.query.filter(Stories.public_id == replies.parent_id).first()
+
+        reply = parent.reply_count - 1
+
+        parent.reply_count = reply
 
         db.session.delete(reply_to_delete) # delete the data
         db.session.commit() # commit to the database
