@@ -28,7 +28,8 @@ def home():
         return redirect('/') # redirect back to index page
 
     else:
-        posts = Stories.query.filter(Stories.current_date == current_time).order_by(Stories.date_created.asc()).all() # Return all data from database sorting from date
+        # posts = Stories.query.filter(Stories.current_date == current_time).order_by(Stories.date_created.asc()).all() # Return all data from database sorting from date
+        posts = Stories.query.order_by(Stories.date_created.asc()).all() # Return all data from database sorting from date
         return render_template('index.html', posts=posts, form=form) # pass the data into the html page
       
     return render_template('index.html')
